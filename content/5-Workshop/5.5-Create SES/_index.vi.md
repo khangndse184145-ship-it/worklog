@@ -6,7 +6,7 @@ chapter : false
 pre : " <b> 5.5. </b> "
 ---
 
-
+## Mục tiêu
 - SES sẽ được dùng để gửi các email xác thực cho học viên
 - Mở rộng sau này với:
   - Email chào mừng tạo tài khoản

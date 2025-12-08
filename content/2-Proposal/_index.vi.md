@@ -30,7 +30,6 @@ Kiến trúc giải pháp của Studying English Website dựa trên nền tản
 <img src="/images/architecture2.png" alt="Studying English Website Architecture" width="750">
 
 *Dịch vụ AWS sử dụng*  
-- *AWS S3*: Lưu trữ dữ liệu thô (data lake) dữ liệu đã  xử lý (2 bucket)
 - *AWS Amplify gen 2*: Lưu trữ giao diện web  
 - *AWS Route53*: Quản lý DNS và định tuyến. 
 - *AWS Cognitor*: Xác thực và quản lý người dùng.
@@ -71,7 +70,6 @@ Có thể xem chi phí trên [AWS Pricing Calculator](https://calculator.aws/#/e
 Hoặc tải [tệp ước tính ngân sách](../attachments/budget_estimation.pdf).  
 
 *Chi phí hạ tầng*  
-- AWS S3: 0,15 USD/tháng (6 GB, 2 bucket, 2.100 request)
 - AWS Amplify gen 2: 0,35 USD/tháng (256 MB, request 500 ms)  
 - AWS Route53: 0,50 USD/tháng (1 domain, 1 triệu query)  
 - AWS Cognito: 0,00 USD/tháng (5 người dùng Free tier) 

@@ -13,7 +13,6 @@ Students can sign in using:
 
 - **Email & password**
 - **Google (Gmail) account**
-- **Facebook account**
 
 Cognito acts as the central identity provider that issues tokens for the frontend and backend of English Journey.
 
@@ -27,10 +26,9 @@ In the architecture of English Journey:
 - It handles **sign-up, sign-in, password reset and email verification**.
 - It integrates with **Amplify** so the React frontend can easily call `signIn`, `signUp` and other auth functions.
 - It also connects to **social identity providers**:  
-  - **Google** → for users who want to log in with their Gmail  
-  - **Facebook** → for users who prefer their Facebook account
-
-All successful logins (email, Google, Facebook) result in **Cognito tokens** that are used to protect our APIs and Lambda functions.
+  - **Google** → for users who want to log in with their Gmail 
+  
+All successful logins (email, Google) result in **Cognito tokens** that are used to protect our APIs and Lambda functions.
 
 ---
 
@@ -57,9 +55,9 @@ This user pool is later referenced by Amplify and the React frontend.
 
 ---
 
-## 5.4.3 Enabling Google (Gmail) and Facebook login
+## 5.4.3 Enabling Google (Gmail)
 
-To support social logins, we added **Google** and **Facebook** as identity providers in Cognito.
+To support social logins, we added **Google** as identity providers in Cognito.
 
 ### Google (Gmail) login
 
@@ -72,17 +70,6 @@ To support social logins, we added **Google** and **Facebook** as identity provi
 
 Now users can click **"Sign in with Google"** and authenticate using their Gmail account.
 
-### Facebook login
-
-1. In **Meta for Developers (Facebook Developer)**, create a new **App** and enable **Facebook Login** for Web.
-2. Configure the **Valid OAuth Redirect URIs** with the Cognito callback URL.
-3. Copy the **App ID** and **App Secret**.
-4. In **Cognito → User pool → Identity providers → Facebook**:
-   - Paste the App ID and App Secret.
-   - Map Facebook attributes (email, name) to Cognito standard attributes.
-
-After this, users can click **"Sign in with Facebook"** to log in with their Facebook profile.
-
 ---
 
 ## 5.4.4 Integrating Cognito with the Amplify frontend
@@ -94,23 +81,10 @@ Conceptually:
 - For **email/password**:
   - `Auth.signUp()` is used to create a new user.
   - `Auth.signIn()` is used for normal login.
-- For **Gmail / Facebook** social login:
-  - We call `Auth.federatedSignIn({ provider: 'Google' })` or `Auth.federatedSignIn({ provider: 'Facebook' })`.
-  - Amplify redirects the user to Google/Facebook, then back to Cognito, then back to the web app with valid tokens.
+- For **Gmail** social login:
+  - We call `Auth.federatedSignIn({ provider: 'Google' })`,
+  - Amplify redirects the user to Google, then back to Cognito, then back to the web app with valid tokens.
 
-Example (simplified) React code:
-
-```tsx
-import { Auth } from 'aws-amplify';
-
-async function signInWithGoogle() {
-  await Auth.federatedSignIn({ provider: 'Google' });
-}
-
-async function signInWithFacebook() {
-  await Auth.federatedSignIn({ provider: 'Facebook' });
-}
-```
 ---
 **On the UI, the login page shows three main options:**
 
@@ -118,37 +92,38 @@ async function signInWithFacebook() {
 
     Sign in with Google
 
-    Sign in with Facebook
-
 All three methods still end up in the same Cognito User Pool.
 
 ---
 ## 5.4.5 Security and user management
 
-**With Cognito we can:**
+**With Cognito, we can:**
 
-- Enforce email verification before allowing full access.
+- Require email verification before granting full access to the application.
 
-- Control which domains can use the login (through callback URLs).
+- Restrict which domains are allowed to use the sign-in flow (via callback URLs).
 
-- Centrally manage users (lock account, reset password, delete user, etc.).
+- Manage users centrally:
+  - Lock accounts
+  - Reset passwords
+  - Delete accounts
 
-- Extend later with MFA or stronger password policies if needed.
+- Extend the solution later with:
+  - MFA (Multi-Factor Authentication)
+  - Additional social providers (GitHub, Facebook, …)
 
-**For the scope of this workshop, we focus on:**
+**Within the scope of this workshop, we focus on:**
 
-- Email & password login
+- Sign-in with email & password  
+- Application login via Gmail  
+- Email verification (OTP)
 
-- Social login via Gmail and Facebook
-
-- Basic email verification
+---
 
 ## Summary
 
-**In this step, we configured Amazon Cognito as the identity service for English Journey:**
+**In this step, we configure Amazon Cognito as the identity management service for English Journey:**
 
-- A User Pool handles user registration and authentication.
-
--  Students can log in using email, Google (Gmail) or Facebook.
-
-- The React + Amplify frontend uses Cognito tokens to call backend APIs securely.
+- Create a User Pool to manage accounts and authenticate users.
+- Allow users to sign in with email and Google (Gmail).
+- Use tokens issued by Cognito in the React + Amplify front end to securely access APIs and back-end services.

@@ -21,11 +21,10 @@ On the AWS side, the project demonstrates how to combine several managed service
 
 - **AWS Amplify** as the central platform for the web app backend and hosting,
 - **Amazon Cognito** for authentication,
-- **AWS Lambda** for backend logic (level test, quizzes, vocabulary),
+- **AWS Lambda** for backend logic (Level test, Quiz, Vocabulary),
 - **Amazon DynamoDB** for application data,
-- **Amazon S3 + CloudFront** for static content and media files,
-- **Amazon SES** for sending email notifications and alerts to learners (welcome emails, reminders, test results),
-- **Amazon CloudWatch** for logs, metrics and alarms,
+- **Amazon SES** for sending email notifications and alerts to learners (Account Verification),
+- **Amazon CloudWatch** for logs, metrics,
 - **AWS WAF** for basic web application protection,
 - and **IAM Roles & Policies** to control access between all components.
 

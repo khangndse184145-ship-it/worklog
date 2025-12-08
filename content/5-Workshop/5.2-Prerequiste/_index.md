@@ -36,20 +36,6 @@ Add the following IAM permission policy to your user account to deploy and clean
       "Resource": "*"
     },
     {
-      "Sid": "S3Permissions",
-      "Effect": "Allow",
-      "Action": [
-        "s3:PutObject",
-        "s3:GetObject",
-        "s3:ListBucket",
-        "s3:DeleteObject"
-      ],
-      "Resource": [
-        "arn:aws:s3:::your-bucket-name/*",
-        "arn:aws:s3:::your-bucket-name"
-      ]
-    },
-    {
       "Sid": "DynamoDBPermissions",
       "Effect": "Allow",
       "Action": [
@@ -119,7 +105,7 @@ This workshop assumes that the reader has basic knowledge of:
 
 - **Cloud and AWS fundamentals**  
   - what an AWS region and account are,  
-  - the idea of managed services (Cognito, Lambda, DynamoDB, S3,…),  
+  - the idea of managed services (Cognito, Lambda, DynamoDB,…),  
   - basic concepts of IAM (identity, role, policy, least privilege).
 
 The report is written so that it can be understood even if the reader does not actually deploy the system, but this background helps to follow the architecture.
@@ -135,9 +121,7 @@ To reproduce the workshop in a real environment, the following tools and service
   - Cognito User Pools,
   - Lambda functions,
   - DynamoDB tables,
-  - S3 buckets,
   - SES identities and configuration sets,
-  - CloudWatch alarms,
   - IAM roles and policies.
 
 - **Node.js and npm** installed locally  
@@ -155,7 +139,7 @@ To reproduce the workshop in a real environment, the following tools and service
 The English Journey project is organised as:
 
 - a **React frontend** (pages such as Level Test, Dictionary, Vocabulary, My Learning),
-- a backend defined via **Amplify** (Cognito, Lambda, DynamoDB, S3),
+- a backend defined via **Amplify** (Cognito, Lambda, DynamoDB),
 - additional infrastructure for **SES (email), CloudWatch and WAF**.
 
 In this Hugo workshop site, we only present the **architecture diagrams, explanations and example code**. The actual AWS resources do not need to be created to understand the design decisions.
