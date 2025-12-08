@@ -47,4 +47,5 @@ pre: " <b> 5. </b> "
 5. [SNS](5.5-Create%20SNS/)
 6. [CloudWatch](5.6-Create%20Cloudwatch/)
 7. [IAM Roles - Policies](5.7-Create%20IAM%20Roles-Policies/)
-8. [Clean up](5.8-Cleanup/)
+8. [Configure Amazon Route 53](5.8-Route%2053/)
+9. [Clean up](5.9-Cleanup/)
