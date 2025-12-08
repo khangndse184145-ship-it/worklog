@@ -125,4 +125,4 @@ In summary, **Amplify** is the central service that creates and connects:
 - **S3 + CloudFront** for hosting and static content,
 - and integrates with **AWS WAF** for additional protection.
 
-The rest of the workshop (MediaConvert, SNS, CloudWatch, IAM policies, …) builds on top of this Amplify-managed backend.
+The rest of the workshop (SNS, CloudWatch, IAM policies, …) builds on top of this Amplify-managed backend.

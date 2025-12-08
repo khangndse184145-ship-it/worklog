@@ -44,8 +44,6 @@ In the AWS console, verify the following services in the workshop Region:
   - Delete S3 buckets that were used only for this workshop (for example: lesson content, media assets, temporary exports).
   - Be careful not to delete shared or production buckets.
 
-- **MediaConvert**  
-  - Remove **job templates**, **queues** or **endpoints** that are dedicated to this workshop, if any.
 
 ---
 
@@ -68,7 +66,6 @@ If your account was moved **out of SES sandbox** only for the workshop, you may 
 1. Open the **CloudWatch** console.
 2. Under **Log groups**, delete log groups that belong only to:
    - the English Journey Lambda functions,
-   - MediaConvert jobs used for this workshop.
 3. Under **Alarms**, delete:
    - alarms that monitor workshop-only resources (Lambda, DynamoDB, SES),  
    - any test alarms you created during the exercises.
@@ -88,7 +85,7 @@ If you deployed a dedicated **WAF Web ACL** for the English Journey frontend:
 Finally, review **IAM** to ensure there are no unused roles or policies left behind:
 
 1. In the **IAM** console, go to **Roles**:
-   - Look for roles created only for this workshop (for example: custom Lambda execution roles, MediaConvert service roles, or roles with names that clearly reference English Journey or the workshop).
+   - Look for roles created only for this workshop (for example: custom Lambda execution roles, or roles with names that clearly reference English Journey or the workshop).
    - Before deleting a role, confirm that no Lambda function, service or user still depends on it.
 
 2. In **Policies**:

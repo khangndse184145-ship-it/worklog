@@ -124,4 +124,4 @@ Trong dự án English Journey, **Amplify** là dịch vụ trung tâm dùng đ�
 - cấu hình **S3 + CloudFront** (hosting và nội dung tĩnh),
 - kết hợp với **AWS WAF** để tăng cường bảo mật.
 
-Các bước tiếp theo của workshop (MediaConvert, SNS, CloudWatch, IAM Roles & Policies, …) sẽ tận dụng backend do Amplify quản lý này để mở rộng thêm khả năng của hệ thống.
+Các bước tiếp theo của workshop (SNS, CloudWatch, IAM Roles & Policies, …) sẽ tận dụng backend do Amplify quản lý này để mở rộng thêm khả năng của hệ thống.

@@ -62,17 +62,6 @@ Gắn IAM permission policy sau vào tài khoản aws user của bạn để tri
       "Resource": "arn:aws:dynamodb:region:account-id:table/your-table-name"
     },
     {
-      "Sid": "MediaConvertPermissions",
-      "Effect": "Allow",
-      "Action": [
-        "mediaconvert:CreateJob",
-        "mediaconvert:DescribeJob",
-        "mediaconvert:ListJobs",
-        "mediaconvert:GetJob"
-      ],
-      "Resource": "*"
-    },
-    {
       "Sid": "SESPermissions",
       "Effect": "Allow",
       "Action": [

@@ -62,17 +62,6 @@ Add the following IAM permission policy to your user account to deploy and clean
       "Resource": "arn:aws:dynamodb:region:account-id:table/your-table-name"
     },
     {
-      "Sid": "MediaConvertPermissions",
-      "Effect": "Allow",
-      "Action": [
-        "mediaconvert:CreateJob",
-        "mediaconvert:DescribeJob",
-        "mediaconvert:ListJobs",
-        "mediaconvert:GetJob"
-      ],
-      "Resource": "*"
-    },
-    {
       "Sid": "SESPermissions",
       "Effect": "Allow",
       "Action": [

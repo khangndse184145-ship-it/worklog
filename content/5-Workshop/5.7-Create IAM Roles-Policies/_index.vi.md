@@ -24,7 +24,6 @@ Trong kiến trúc từ các mục 5.3–5.6, IAM là “chất keo” kết n�
 
 - **Amplify** sử dụng IAM roles để triển khai các CloudFormation stack và host frontend.
 - Các hàm **Lambda** dùng execution role để truy cập DynamoDB, S3 và SES (để gửi email).
-- **MediaConvert** dùng service role để đọc/ghi file media trong S3.
 - **CloudWatch** và **SES** dựa vào IAM để có thể gửi cảnh báo và email thông báo một cách chính xác.
 
 Mục tiêu thiết kế là *mỗi thành phần chỉ nhận đúng số quyền tối thiểu mà nó cần*.

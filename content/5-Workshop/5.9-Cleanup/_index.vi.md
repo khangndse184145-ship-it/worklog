@@ -49,8 +49,6 @@ Trong AWS console, tại đúng Region workshop, hãy kiểm tra các dịch v�
   - Xoá các S3 bucket dùng riêng cho workshop (chứa nội dung bài học, media, file tạm, …).  
   - Cẩn thận không xoá các bucket dùng chung hoặc môi trường production.
 
-- **MediaConvert**  
-  - Xoá các **job template**, **queue** hoặc **endpoint** được tạo cho workshop (nếu có).
 
 ---
 
@@ -73,7 +71,6 @@ Nếu bạn đã yêu cầu **thoát khỏi chế độ sandbox của SES** ch�
 1. Mở console **CloudWatch**.
 2. Ở mục **Log groups**, xoá:
    - các log group của Lambda function thuộc English Journey,
-   - log group của MediaConvert jobs dùng trong workshop.
 3. Ở mục **Alarms**, xoá:
    - các alarm giám sát tài nguyên chỉ dùng cho workshop (Lambda, DynamoDB, SES),
    - các alarm test bạn đã tạo trong quá trình thực hành.
@@ -93,7 +90,7 @@ Nếu bạn đã cấu hình một **WAF Web ACL** riêng cho frontend của Eng
 Cuối cùng, hãy rà soát **IAM** để đảm bảo không còn role/policy nào bị “mồ côi”:
 
 1. Trong console **IAM**, vào mục **Roles**:
-   - Tìm các role được tạo chỉ cho workshop (ví dụ: các Lambda execution role tuỳ chỉnh, MediaConvert service role, hoặc role có tên chứa English Journey / workshop).
+   - Tìm các role được tạo chỉ cho workshop (ví dụ: các Lambda execution role tuỳ chỉnh, hoặc role có tên chứa English Journey / workshop).
    - Trước khi xoá, hãy kiểm tra chắc chắn không còn Lambda, dịch vụ hay người dùng nào đang dùng role đó.
 
 2. Trong mục **Policies**:
