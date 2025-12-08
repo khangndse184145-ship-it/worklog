@@ -167,7 +167,7 @@ The English Journey project is organised as:
 
 - a **React frontend** (pages such as Level Test, Dictionary, Vocabulary, My Learning),
 - a backend defined via **Amplify** (Cognito, Lambda, DynamoDB, S3),
-- additional infrastructure for **MediaConvert, SES (email), CloudWatch and WAF**.
+- additional infrastructure for **SES (email), CloudWatch and WAF**.
 
 In this Hugo workshop site, we only present the **architecture diagrams, explanations and example code**. The actual AWS resources do not need to be created to understand the design decisions.
 

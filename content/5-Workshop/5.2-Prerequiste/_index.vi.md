@@ -167,7 +167,7 @@ Dự án English Journey được tổ chức như sau:
 
 - Một **frontend React** (các trang như Level Test, Dictionary, Vocabulary, My Learning),
 - Backend được định nghĩa thông qua **Amplify** (Cognito, Lambda, DynamoDB, S3),
-- Hạ tầng bổ sung cho **MediaConvert, SES (email), CloudWatch và WAF**.
+- Hạ tầng bổ sung cho **SES (email), CloudWatch và WAF**.
 
 Trong trang workshop Hugo này, chúng ta chỉ trình bày **các sơ đồ kiến trúc, phần giải thích và ví dụ mã nguồn**. Bạn không cần phải tạo thật các tài nguyên AWS để hiểu các quyết định thiết kế.
 
