@@ -12,9 +12,9 @@ Phần này giải thích cách **IAM roles và policies** được thiết kế
 
 Phần lớn các role được sinh tự động bởi **AWS Amplify**, nhưng chúng ta vẫn cần hiểu:
 
-- có những role nào tồn tại,
-- mỗi role được phép làm gì (S3, DynamoDB, SES, MediaConvert, …),
-- và cách chúng ta áp dụng nguyên tắc **ít quyền nhất (least privilege)**.
+- Có những role nào tồn tại,
+- Mỗi role được phép làm gì (DynamoDB, SES,…),
+- Và cách chúng ta áp dụng nguyên tắc **ít quyền nhất (least privilege)**.
 
 ---
 
