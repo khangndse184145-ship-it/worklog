@@ -56,4 +56,4 @@ Dự án này tận dụng các dịch vụ của AWS để xây dựng và tri�
 
     - Amazon CloudWatch: Giám sát hiệu suất và hoạt động của ứng dụng, cung cấp log và cảnh báo khi có sự cố.
 
-<img src="/images/5-Workshop/5.1-Workshop-overview/diagram1.png" alt="Overview" width="600">
+<img src="/images/5-Workshop/5.1-Workshop-overview/architecture2.png" alt="Overview" width="600">

@@ -26,7 +26,7 @@ The Studying English Website helps learners enhance their English skills in a pe
 ### 3. Solution Architecture  
 The architecture of the Studying English Website is based on the AWS serverless platform, using S3 to store raw and processed data, Amplify Gen 2 for web interface deployment, MediaConvert for video and audio conversion, Route53 for DNS and routing management, Cognito for user authentication and management, Secrets Manager for sensitive information security, IAM for access control, Lambda for event-driven serverless logic, and WAF to protect the application from attacks, creating a flexible, personalized, secure, and scalable English learning system.
 
-<img src="/images/architecture1.png" alt="Studying English Website Architecture" width="750">
+<img src="/images/architecture2.png" alt="Studying English Website Architecture" width="750">
 
 
 
